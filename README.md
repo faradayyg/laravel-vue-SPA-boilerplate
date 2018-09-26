@@ -1,5 +1,5 @@
-# php-vue-SPA-boilerplate
-Starter pack for php Vue SPA applications, with a few helpers and mixins
+# LaraVue Boiler
+This is a starter pack for laravel ans Vue Single Page Applications, with a few helpers and mixins
 - See live demo at <http://laravue-boiler.herokuapp.com/>
 
 ## What's included

@@ -26352,7 +26352,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("li", [
       _vm._v(
-        "\n\t\t\t\tAn EventBus plugin. This can emit application-wide messages, which can be listened to by other components."
+        "\n\t\t\t\tAn EventBus plugin. This emits application-wide messages, which can be listened to by other components."
       ),
       _c("br"),
       _vm._v(" "),

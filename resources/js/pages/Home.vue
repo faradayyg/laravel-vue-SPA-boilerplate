@@ -31,7 +31,7 @@
 					Vue Top Progress, Will always appear at the top when a network call is being made <b>using the http mixin above</b> (except you remove it from the App.vue 😒)
 				</li>
 				<li>
-					An EventBus plugin. This can emit application-wide messages, which can be listened to by other components.<br /> 
+					An EventBus plugin. This emits application-wide messages, which can be listened to by other components.<br /> 
 					<b>Usage:</b> <code>this.eventBus.$emit('some.action')</code> 
 					<br />to listen for a specific event:
 					<code>this.$eventBus.$on('some.action', doSomething)</code>
