@@ -26191,6 +26191,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
@@ -26443,6 +26444,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
+      _c("hr"),
       _vm._v(
         "\n\t\tThere are probably other cool stuff in there which I forgot to document. Let me know if you find any of such things. \n\t\tfaradayyg@gmail.com\n\t\t"
       ),

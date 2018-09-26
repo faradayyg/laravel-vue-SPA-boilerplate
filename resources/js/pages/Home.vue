@@ -72,6 +72,7 @@
 
 		</div>
 		<div class="text-center">
+			<hr>
 			There are probably other cool stuff in there which I forgot to document. Let me know if you find any of such things. 
 			faradayyg@gmail.com
 			<br />
