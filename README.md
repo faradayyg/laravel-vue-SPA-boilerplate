@@ -1,10 +1,13 @@
 # php-vue-SPA-boilerplate
 Starter pack for php Vue SPA applications, with a few helpers and mixins
+See live demo at <http://laravue-boiler.herokuapp.com/>
 
 ## What's included
 - A vue base setup
 - Dependencies
 - Mixins 
+
+Basically, everything you might need to hit the ground running to build a Vue laravel SPA application.
 
 ## Getting Started
 - Run `composer install` to install all laravel PHP dependencies
@@ -21,3 +24,4 @@ Starter pack for php Vue SPA applications, with a few helpers and mixins
 
 ## Contributions
 - Just make a fork, make a PR and I will merge as soon as possible
+

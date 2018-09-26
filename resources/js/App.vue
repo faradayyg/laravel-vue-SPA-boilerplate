@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vue-topprogress ref="topProgress" color="#fd9"></vue-topprogress>
+    <vue-topprogress ref="topProgress" color="#f00"></vue-topprogress>
     <router-view></router-view>
   </div>
 </template>

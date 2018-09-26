@@ -13,5 +13,8 @@
 
 
 //Place all other routes before this one.
+Route::get('/test', function(){
+	return ["status" => "Success", "data"=>["your", "response", "from", "server"]];
+});
 Route::get('/', 'HomeController@serveStatic')->where('all', '^(?!api).*$');
 Route::get('/{any}', 'HomeController@serveStatic')->where('any', '^(?!api).*$');

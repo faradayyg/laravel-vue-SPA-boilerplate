@@ -27,6 +27,7 @@ Vue.mixin({
   	/* 
   	* Global methods available throughout the entire application are defined here 
   	* It will be safer to "namespace" these methods though. eg: GBDeleteAlert() GB for global
+  	* Also methods that call mutators are declared here
   	*/
   }
 });

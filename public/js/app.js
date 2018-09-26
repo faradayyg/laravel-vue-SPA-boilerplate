@@ -12093,6 +12093,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.mixin({
     /* 
     * Global methods available throughout the entire application are defined here 
     * It will be safer to "namespace" these methods though. eg: GBDeleteAlert() GB for global
+    * Also methods that call mutators are declared here
     */
   }
 });
@@ -15185,7 +15186,7 @@ var render = function() {
     "div",
     { attrs: { id: "app" } },
     [
-      _c("vue-topprogress", { ref: "topProgress", attrs: { color: "#fd9" } }),
+      _c("vue-topprogress", { ref: "topProgress", attrs: { color: "#f00" } }),
       _vm._v(" "),
       _c("router-view")
     ],
@@ -25837,7 +25838,7 @@ exports = module.exports = __webpack_require__(51)(false);
 
 
 // module
-exports.push([module.i, "\nh2[data-v-b3c5cf30]{\n\ttext-align: center;\n}\n", ""]);
+exports.push([module.i, "\nh2[data-v-b3c5cf30]{\n\ttext-align: center;\n}\nol[data-v-b3c5cf30] {\n\tmax-width: 500px;\n\tmargin: auto;\n\ttext-align: left;\n}\nol li[data-v-b3c5cf30]{\n\tmargin: 10px;\n\tpadding-left: 15px;\n}\n", ""]);
 
 // exports
 
@@ -26120,12 +26121,102 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	data: function data() {
 		return {
-			message: "welcome to my SPA"
+			message: "welcome to my SPA",
+			httpResponse: null
 		};
+	},
+
+	methods: {
+		showToastr: function showToastr() {
+			var type = Math.round(Math.random());
+
+			if (type == 1) {
+				this.$toastr.s('Hello World people, this is not an error');
+			} else {
+				this.$toastr.e('Hello World people, this is not success');
+			}
+		},
+		makeRequest: function makeRequest() {
+			var _this = this;
+
+			this.http.get('/test').then(function (resp) {
+				_this.httpResponse = resp;
+			});
+		}
 	}
 });
 
@@ -26138,6 +26229,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "mt-4 pt-4" }, [
+    _vm._m(0),
+    _c("br"),
+    _vm._v(" "),
     _c("h2", [
       _vm._v("\n\t\tThis is the Home page "),
       _c("br"),
@@ -26155,10 +26249,212 @@ var render = function() {
         ],
         1
       )
-    ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "text-center" }, [
+      _c("hr"),
+      _vm._v(" "),
+      _c("h3", [_vm._v("\n\t\t\tNice! You have Successfully setup.\n\t\t")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("\n\t\t\tHere's what's included:\n\t\t")]),
+      _vm._v(" "),
+      _c("ol", [
+        _c("li", [
+          _vm._v("\n\t\t\t\tVue Toastr "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-default",
+              on: {
+                click: function($event) {
+                  _vm.showToastr()
+                }
+              }
+            },
+            [_vm._v(" Click ")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v("\n\t\t\t\tA http mixin (Wrapper around axios) "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-default",
+              on: {
+                click: function($event) {
+                  _vm.makeRequest()
+                }
+              }
+            },
+            [_vm._v(" Click ")]
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("code", [_vm._v(_vm._s(_vm.httpResponse))])
+        ]),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _c("li", [
+          _vm._v(
+            "\n\t\t\t\tA Vuex Store. I'd normally declare the functions that call the mutators inside the mixin in my bootstrap.js, but hey, do you ¯\\_(ツ)_/¯\n\t\t\t"
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("h3", [_vm._v("How it works")]),
+      _vm._v(" "),
+      _vm._m(3)
+    ]),
+    _vm._v(" "),
+    _vm._m(4)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticStyle: { float: "right" } }, [
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "https://github.com/faradayyg/laravel-vue-SPA-boilerplate"
+          }
+        },
+        [_vm._v("View on Github")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _vm._v(
+        "\n\t\t\t\tVue Top Progress, Will always appear at the top when a network call is being made "
+      ),
+      _c("b", [_vm._v("using the http mixin above")]),
+      _vm._v(" (except you remove it from the App.vue 😒)\n\t\t\t")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _vm._v(
+        "\n\t\t\t\tAn EventBus plugin. This can emit application-wide messages, which can be listened to by other components."
+      ),
+      _c("br"),
+      _vm._v(" "),
+      _c("b", [_vm._v("Usage:")]),
+      _vm._v(" "),
+      _c("code", [_vm._v("this.eventBus.$emit('some.action')")]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v("to listen for a specific event:\n\t\t\t\t"),
+      _c("code", [_vm._v("this.$eventBus.$on('some.action', doSomething)")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ol", [
+      _c("li", [
+        _vm._v("\n\t\t\t\tRouting: All routes are declared in the "),
+        _c("code", [_vm._v("routes.js")]),
+        _vm._v("  file.\n\t\t\t")
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n\t\t\t\tFurther information about a route can be passed using the "
+        ),
+        _c("code", [_vm._v("meta")]),
+        _vm._v(" attribute\n\t\t\t")
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("\n\t\t\t\tProtected routes have the "),
+        _c("code", [_vm._v("meta.requiresAuth")]),
+        _vm._v(" attribute set to true.\n\t\t\t")
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          '\n\t\t\t\tRoutes that should not be visited if logged in, Eg. "login page", should have the '
+        ),
+        _c("code", [_vm._v("meta.requiresAuth")]),
+        _vm._v(" attribute set to false.\n\t\t\t")
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n\t\t\t\tThe compile-time configuration variables are stored in "
+        ),
+        _c("code", [_vm._v("resources/js/config/env.js")]),
+        _vm._v(
+          ". This includes the base URL, the name of the localStorage key for the token, (Which I called cookie_name), coz "
+        ),
+        _c(
+          "a",
+          { attrs: { href: "https://en.wikipedia.org/wiki/Hobnob_biscuit" } },
+          [_vm._v("Hobnob")]
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n\t\t\t\tOther Custom config variables can be passed in there as well\n\t\t\t"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("\n\t\t\t\tThe store is a Vuex instance "),
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://scotch.io/tutorials/state-management-in-vue-getting-started-with-vue"
+            }
+          },
+          [_vm._v("Read More")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "\n\t\t\t\tThe eventBus is a vue instance passed into the main vue instance as a mixin. Used for emitting and listening for events across components.\n\t\t\t"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _vm._v(
+        "\n\t\tThere are probably other cool stuff in there which I forgot to document. Let me know if you find any of such things. \n\t\tfaradayyg@gmail.com\n\t\t"
+      ),
+      _c("br"),
+      _vm._v("\n\t\tSpecial thanks to "),
+      _c("a", { attrs: { href: "https://github.com/ezra-obiwale" } }, [
+        _vm._v("Ezra Obiwale ")
+      ]),
+      _vm._v(", PS: he taught me a lot.\n\t")
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
