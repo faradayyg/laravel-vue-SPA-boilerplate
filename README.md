@@ -1,5 +1,5 @@
 # LaraVue Boiler
-This is a starter pack for laravel ans Vue Single Page Applications, with a few helpers and mixins
+This is a starter pack for laravel and Vue Single Page Applications, with a few helpers and mixins
 - See live demo at <http://laravue-boiler.herokuapp.com/>
 
 ## What's included
